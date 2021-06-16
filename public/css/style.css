@@ -1,0 +1,251 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f3e9f1;
+  height: 100px;
+}
+@media screen and (min-width: 700px) {
+  header {
+    height: 130px;
+  }
+}
+
+img {
+  margin-left: 0.5rem;
+  width: 45%;
+  height: 80px;
+}
+@media screen and (min-width: 700px) {
+  img {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  img {
+    width: 28%;
+    height: 130px;
+    margin-left: 2rem;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 48%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+@media screen and (min-width: 700px) {
+  nav {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  nav {
+    width: 35%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3e9f1;
+  margin-top: 6rem;
+}
+footer img {
+  width: 130px;
+  height: 60px;
+}
+@media screen and (min-width: 1100px) {
+  footer img {
+    width: 150px;
+    height: 80px;
+  }
+}
+footer .ftr-info {
+  width: 70%;
+  margin-top: -0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 1100px) {
+  footer .ftr-info {
+    width: 40%;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  h1 {
+    margin-top: 7rem;
+  }
+}
+
+#affichertout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product {
+  width: 75%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  background-color: #f3e9f1;
+}
+@media screen and (min-width: 700px) {
+  .product {
+    width: 50%;
+    height: 380px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .product {
+    width: 35%;
+  }
+}
+.product img {
+  margin-top: 10px;
+  border: 3px solid #c57a62;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .product img {
+    width: 55%;
+    height: 45%;
+  }
+}
+.product p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin-top: -0.5rem;
+}
+@media screen and (min-width: 700px) {
+  .product p {
+    font-size: 24px;
+  }
+}
+.product button {
+  margin-top: -2.7rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0.6rem;
+  border-radius: 0.7rem;
+  background-color: #c2a2f2;
+}
+@media screen and (min-width: 700px) {
+  .product button {
+    font-size: 22px;
+    padding: 0.8rem;
+  }
+}
+.product button a {
+  color: black;
+  text-decoration: none;
+}
+
+#chosenteddy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.teddyinfo {
+  width: 90%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  background-color: #f3e9f1;
+}
+@media screen and (min-width: 700px) {
+  .teddyinfo {
+    width: 70%;
+    height: 570px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .teddyinfo {
+    width: 55%;
+  }
+}
+.teddyinfo h1 {
+  margin-top: 1rem;
+}
+.teddyinfo h2 {
+  text-align: center;
+  margin-top: -2rem;
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .teddyinfo h2 {
+    font-size: 1.7rem;
+  }
+}
+.teddyinfo img {
+  width: 55%;
+  height: 120px;
+  margin-top: -2rem;
+  border: 3px solid #c57a62;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .teddyinfo img {
+    width: 50%;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .teddyinfo img {
+    width: 38%;
+    height: 170px;
+  }
+}
+.teddyinfo p {
+  width: 85%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 19px;
+  margin-top: -0.5rem;
+}
+@media screen and (min-width: 700px) {
+  .teddyinfo p {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

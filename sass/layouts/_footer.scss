@@ -1,0 +1,26 @@
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#f3e9f1;
+    margin-top:6rem;
+    img{
+        @include measure(130px,60px);
+        @include breakpoint(laptop){
+            @include measure(150px,80px);
+        }
+    }
+    .ftr-info{
+        width:70%;
+        margin-top:-0.5rem;
+        @include flexJustify(flex,row,space-around);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size:1.2rem;
+        @include breakpoint(laptop){
+            width:40%;
+        }
+    }
+}
+
+// adjust space between footer and div here //
