@@ -31,4 +31,8 @@ nav{
     @include breakpoint(laptop){
         width:35%;
     }
+    a{
+        text-decoration: none;
+        color:black;
+    }
 }

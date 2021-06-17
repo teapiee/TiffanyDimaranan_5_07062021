@@ -48,6 +48,10 @@ nav {
     width: 35%;
   }
 }
+nav a {
+  text-decoration: none;
+  color: black;
+}
 
 footer {
   display: flex;
@@ -169,6 +173,12 @@ h1 {
 .product button a {
   color: black;
   text-decoration: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #chosenteddy {

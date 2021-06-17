@@ -22,17 +22,32 @@ async function chosenTeddy() {
         teddyImg.setAttribute('src', teddyInfo.imageUrl);
         teddyDescrip.innerText = teddyInfo.description;
         
-
         anchor.appendChild(teddy)
         teddy.appendChild(teddyName)
         teddy.appendChild(teddyPrice)
         teddy.appendChild(teddyImg)
         teddy.appendChild(teddyDescrip)
+        
+        const colorAvailable = teddyInfo.colors;
+          console.log(colorAvailable);
+          
+          for (color of colorAvailable){
+              console.log(color);
+               let ancre = document.getElementById("color");
+               let teddyColors = document.createElement('option');
+               teddyColors.innerText = color;
+               ancre.appendChild(teddyColors)
+          }
+        
+
+
+        
 
     })
 }
 
 chosenTeddy();
+
 
 
 
