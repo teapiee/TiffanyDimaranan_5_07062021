@@ -1,0 +1,30 @@
+section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#panier{
+    width:90%;
+    margin-top: 3rem;
+    @include flexBox(flex, row, space-around, center);
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight:600;
+        font-size:22px;
+        text-decoration: underline;
+    }
+    p{
+        font-family: 'Montserrat', sans-serif;
+        font-weight:400;
+        font-size:20px;
+    }
+}
+
+#prixtotal p{
+    margin-top:3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:22px;
+}
+

@@ -6,29 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/style.css"/>
-    <title>Page d'accueil</title>
+    <title>Page panier</title>
 </head>
+
 <body>
     <header>
         <img src="images/logo.png"></img>
         <nav>
             <p><a href="index.html">Accueil</a></p>
-            <p><a href="panier.html">Panier</a></p>
+            <p><a href="index.html">Panier</a></p>
         </nav>
      </header>
-
+    
     <section>
-    <h1>Nos ours en peluche faits à la main</h2>
-    <div id="affichertout"></div>
-    </section>
+        <h1>Mon panier</h1>
+        <div id="panier">
+            <div id="teddyname">
+                <h2>Nom</h2>
+            </div>
+            <div id="teddycolor">
+                <h2>Couleur</h2>
+            </div>
+            <div id="teddyprice">
+                <h2>Prix</h2>
+            </div>
+        </div>
+        <div id="prixtotal"></div>
 
-    <footer>
+    </section>
+    
+     <footer class="ftr-product">
         <img src="images/logo.png"></img>
         <div class="ftr-info">
             <p>About</p>
             <p>Contact</p>
         </div>
-    </footer>   
+    </footer>
+    
 </body>
-<script src="index.js"></script>
+<script src="panier.js"></script>
 </html>
