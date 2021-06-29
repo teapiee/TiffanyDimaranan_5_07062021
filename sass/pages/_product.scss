@@ -4,7 +4,7 @@
     align-items: center;
 }
 #chosenteddy{
-    @include flexBox(flex,column,space-around,center);
+    @include flexBox(flex,column-reverse,space-around,center);
 }
 
 .teddyinfo{
@@ -60,3 +60,37 @@
     }
 }
 
+select{
+    font-size:0.9rem;
+    padding:1em 1em;
+    background-color: #f3e9f1;
+    position:relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#addtocart button{
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size:17px;
+    padding:0.6rem;
+    border-radius: 0.7rem;
+    background-color: #c2a2f2;
+    @include breakpoint(tablet){
+        font-size:22px;
+        padding:0.8rem;
+    }
+}
+
+
+
+
+  
+  
+  
+ 
+
+
+
+  
