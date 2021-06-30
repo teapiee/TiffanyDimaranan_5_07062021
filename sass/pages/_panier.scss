@@ -28,3 +28,72 @@ section{
     font-size:22px;
 }
 
+#bouton{
+    width:70%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    button{
+        margin-top: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size:17px;
+        padding:0.6rem;
+        border-radius: 0.7rem;
+        background-color: #c2a2f2;
+        border:none;
+        box-shadow:5px 5px 4px rgb(216, 213, 213);
+        @include breakpoint(tablet){
+            font-size:22px;
+            padding:0.8rem;
+        }
+    }
+}
+
+#formulaire{
+    margin-top:7rem;
+    width:60%;
+    height:400px;
+    @include flexBox(flex,column,space-around,center);
+    background-color:#f7e8de;
+    border-radius: 2rem;
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight:600;
+        font-size:23px; 
+    }
+    label{
+        font-family: 'Montserrat', sans-serif;
+        font-weight:400;
+        font-size:18px;
+    }
+    #prenom, #nom, #adresse, #ville, #email{
+        font-size: 18px;
+        border: none;
+        border-radius: 6px;
+    }
+    #prenom{
+        margin-left: 1rem;
+    }
+    #nom{
+        margin-left: 2.5rem;
+    }
+    #adresse{
+        margin-left: 0.9rem;
+    }
+    #ville{
+        margin-left: 2.8rem;
+    }
+    #email{
+        margin-left: 1.9rem;
+    }
+    button{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        width:30%;
+        font-size:17px;
+        padding:0.5rem;
+        border-radius: 0.7rem;
+    }
+    
+}

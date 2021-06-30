@@ -316,4 +316,78 @@ section {
   font-size: 22px;
 }
 
+#bouton {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#bouton button {
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0.6rem;
+  border-radius: 0.7rem;
+  background-color: #c2a2f2;
+  border: none;
+  box-shadow: 5px 5px 4px #d8d5d5;
+}
+@media screen and (min-width: 700px) {
+  #bouton button {
+    font-size: 22px;
+    padding: 0.8rem;
+  }
+}
+
+#formulaire {
+  margin-top: 7rem;
+  width: 60%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7e8de;
+  border-radius: 2rem;
+}
+#formulaire h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+}
+#formulaire label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+#formulaire #prenom, #formulaire #nom, #formulaire #adresse, #formulaire #ville, #formulaire #email {
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+}
+#formulaire #prenom {
+  margin-left: 1rem;
+}
+#formulaire #nom {
+  margin-left: 2.5rem;
+}
+#formulaire #adresse {
+  margin-left: 0.9rem;
+}
+#formulaire #ville {
+  margin-left: 2.8rem;
+}
+#formulaire #email {
+  margin-left: 1.9rem;
+}
+#formulaire button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 30%;
+  font-size: 17px;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+}
+
 /*# sourceMappingURL=style.css.map */
