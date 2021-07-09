@@ -1,0 +1,22 @@
+.fas{
+    margin: 3rem;
+    font-size: 55px;
+    color:#d48139;
+}
+
+#confirmation{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1{
+    margin-top:-1rem;
+    }
+    p{
+        font-family: 'Montserrat', sans-serif;
+        font-weight:400;
+        text-align: center;
+        font-size:19px;
+        width:80%;
+    }
+}
