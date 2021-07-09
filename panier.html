@@ -19,7 +19,7 @@
      </header>
     
     <section>
-        <h1>Mon panier</h1>
+        <div id="paniervide"></div>
         <div id="panier">
             <div id="teddyname">
                 <h2>Nom</h2>
@@ -31,6 +31,7 @@
                 <h2>Prix</h2>
             </div>
         </div>
+        
         <div id="prixtotal"></div>
         <div id="bouton"></div>
         <div id="formulaire">
@@ -38,23 +39,23 @@
             <form method="post" id= "commandform">
                 <p>
                     <label for="prenom">Prénom:</label>
-                    <input type="text" name="prenom" id="prenom" placeholder="Ex: Jean" size="25"/>
+                    <input type="text" pattern = "[A-Za-z]{2,12}" name="prenom" id="prenom"  size="25" required/>
                 </p>
                 <p>
                     <label for="nom">Nom:</label>
-                    <input type="text" name="nom" id="nom" placeholder="Ex: Dupont" size="25"/>
+                    <input type="text" pattern = "[A-Za-z]{2,15}" name="nom" id="nom"  size="25" required/>
                 </p>
                 <p>
                     <label for="adresse">Adresse:</label>
-                    <input type="text" name="adresse" id="adresse" placeholder="Ex: 1 rue de rivoli" size="25"/>
+                    <input type="text" pattern = "[A-Za-z0-9\s]{3,30}" name="adresse" id="adresse"  size="25" required/>
                 </p>
                 <p>
                     <label for="ville">Ville:</label>
-                    <input type="text" name="ville" id="ville" placeholder="Ex: Paris" size="25"/>
+                    <input type="text" pattern = "[A-Za-z]{3,30}" name="ville" id="ville"  size="25" required/>
                 </p>
                 <p>
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" placeholder="Ex: monemail@yahoo.fr" size="25"/>
+                    <input type="text" pattern = "[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)" name="email" id="email"  size="25" required/>
                 </p>
             </form>
         </div>
