@@ -1,4 +1,5 @@
-function afficherLeToutSousFormeDeDivisions(nounours) {
+/* DISPLAY ALL TEDDIES WITH EACH THEIR NAME, PHOTO AND PRICE*/
+function afficherToutTeddies(nounours) {
     
     let anchor = document.getElementById("affichertout");
     for (let elem of nounours) {
@@ -20,10 +21,11 @@ function afficherLeToutSousFormeDeDivisions(nounours) {
     }
   }
 
+  /* FETCH API TEDDIES INFO*/
   async function showAll() {
     await fetch('http://localhost:3000/api/teddies') 
       .then((response) => response.json()) 
-      .then((nounours) => afficherLeToutSousFormeDeDivisions(nounours)) 
+      .then((nounours) => afficherToutTeddies(nounours)) //console.log(nounours))
   }
   
   showAll()
