@@ -1,6 +1,5 @@
 /* DISPLAY ALL TEDDIES WITH EACH THEIR NAME, PHOTO AND PRICE*/
-function afficherToutTeddies(nounours) {
-    
+function displayAllTeddies(nounours) {
     let anchor = document.getElementById("affichertout");
     for (let elem of nounours) {
         let product = document.createElement("div");
@@ -17,7 +16,6 @@ function afficherToutTeddies(nounours) {
         product.appendChild(img)
         product.appendChild(para)
         product.appendChild(button)
-
     }
   }
 
@@ -25,7 +23,7 @@ function afficherToutTeddies(nounours) {
   async function showAll() {
     await fetch('http://localhost:3000/api/teddies') 
       .then((response) => response.json()) 
-      .then((nounours) => afficherToutTeddies(nounours)) //console.log(nounours))
+      .then((nounours) => displayAllTeddies(nounours)) //console.log(nounours))
   }
   
   showAll()

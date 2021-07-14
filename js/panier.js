@@ -2,18 +2,19 @@
 let cart = localStorage.getItem('panier')
 cart = JSON.parse(cart)
 
-/* IF CART IS EMPTY, SHOW MESSAGE; ELSE EXECUTE REST OF THE CODE*/
-if (cart === null){
+if (cart === null || cart.length === 0){ // if cart is empty then show message //
     let anchornull = document.getElementById('paniervide')
     let cartvide = document.createElement('h1')
     cartvide.innerText = "Votre panier est vide"
     anchornull.appendChild(cartvide)
-}   else {
-    let sum = 0;             //initial price//
+
+}else { // if cart has item/s //
+
+    let sum = 0;     
     let allProductId = [];   
 
-    /* DISPLAY ITEMS IN CART */
-    for (product of cart){
+    function displayItemsinCart() {   /* DISPLAY ITEMS IN CART */
+        for (product of cart){
 
         let anchorName = document.getElementById('teddyname')
         let anchorColor = document.getElementById('teddycolor')
@@ -33,15 +34,16 @@ if (cart === null){
 
         sum = sum + product.price;              //equation for total price//
         allProductId.push(product.idProduct);   //adds every idproduct in the cart to allProductId array//
-    }
+        }
 
-        /* SHOW TOTAL PRICE */
-        let anchorTotalPrice = document.getElementById('prixtotal')
+        let anchorTotalPrice = document.getElementById('prixtotal') /* SHOW TOTAL PRICE */
         let totalPrice = document.createElement('p')
         totalPrice.innerText = "Le prix total est de " + sum + '€'
         anchorTotalPrice.appendChild(totalPrice)
+    }
 
-        /* ADD VIDER PANIER */
+    /* ADD VIDER PANIER */
+    function buttonEmptyCart(){
         let checkOut = document.getElementById("bouton")
         let viderPanier = document.createElement("button")
         viderPanier.innerText = "Vider panier"
@@ -56,55 +58,51 @@ if (cart === null){
                 null
             }
         }
+    }
 
-        /* FORMULAIRE */
+    /* FORMULAIRE */
 
-        //create button send//
-        let formulaire = document.getElementById('commandform')
-        let envoyer = document.createElement('button')
-        envoyer.innerText = "Valider panier"
-        formulaire.appendChild(envoyer)
+    //create button send//
+    let formulaire = document.getElementById('commandform')
+    let envoyer = document.createElement('button')
+    envoyer.innerText = "Valider panier"
+    formulaire.appendChild(envoyer)
 
-        // get element of form for validity//
-        let firstName = document.getElementById('prenom');
-        let lastName = document.getElementById('nom');
-        let address = document.getElementById('adresse');
-        let city = document.getElementById('ville');
-        let mail = document.getElementById('email');
+    // get element of form for validity//
+    let firstName = document.getElementById('prenom');
+    let lastName = document.getElementById('nom');
+    let address = document.getElementById('adresse');
+    let city = document.getElementById('ville');
+    let mail = document.getElementById('email');
 
-        //when send button is clicked//
-        envoyer.onclick = function(event){
-            event.preventDefault()
+    //when send button is clicked//
+    envoyer.onclick = function(event){
+        event.preventDefault()
 
-            /* CHECK VALIDITY*/
-            if (firstName.checkValidity() && lastName.checkValidity() && address.checkValidity() &&
-            city.checkValidity() && mail.checkValidity()){
-            //if true then execute rest of the code//
+        /* CHECK VALIDITY*/
+        if (firstName.checkValidity() && lastName.checkValidity() && address.checkValidity() &&
+        city.checkValidity() && mail.checkValidity()){
         
-            //get value of form//
-            let clientPrenom = document.getElementById('prenom').value;
+            let clientPrenom = document.getElementById('prenom').value; //get value of form//
             let clientNom = document.getElementById('nom').value;
             let clientAdresse = document.getElementById('adresse').value;
             let clientVille = document.getElementById('ville').value;
             let clientEmail = document.getElementById('email').value;
-            
-            //make an object to store data//
-            const commande = {contact: {
-                    firstName: clientPrenom,
-                    lastName: clientNom,
-                    address: clientAdresse,
-                    city: clientVille,
-                    email: clientEmail,
+                      
+            const commande = {contact: { //make an object to store data//
+                firstName: clientPrenom,
+                lastName: clientNom,
+                address: clientAdresse,
+                city: clientVille,
+                email: clientEmail,
                 },
                 products: allProductId
-            }
+                }
             
             /* POST REQUEST*/
             const send = {
             method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
+            headers: {'Content-Type': 'application/json', },
             body: JSON.stringify(commande),
             };
 
@@ -114,13 +112,13 @@ if (cart === null){
                     localStorage.setItem("order", JSON.stringify(response)) //create order key; with all the user's contact info and orderId// 
                     window.location.href = "confirmation.html" //redirect to confirmation page//
                 })
-            
-            //else statement of checkValidity//
-            }else{
-                alert("Le formulaire n'est pas correctement renseigné")
-                return false
-            }
-
+             
+        }else{ //else statement of checkValidity//
+            alert("Le formulaire n'est pas correctement renseigné")
+            return false
         }
-
+    }
 }
+
+displayItemsinCart()
+buttonEmptyCart()
