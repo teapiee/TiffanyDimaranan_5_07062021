@@ -72,7 +72,7 @@ function addToCart(teddyInfo){
     }
 }
 
-/* FETCH API CHOSEN TEDDY*/
+/* GET REQUEST CHOSEN TEDDY*/
 async function fetchChosenTeddy() {
   await fetch(`http://localhost:3000/api/teddies/${teddyId}`)
     .then((response) => response.json()) 

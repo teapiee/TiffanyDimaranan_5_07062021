@@ -7,9 +7,9 @@ function displayAllTeddies(nounours) {
         let button = document.createElement("button");
         let para = document.createElement("p");
 
+        product.classList.add('product');
         img.setAttribute('src', elem.imageUrl);
         button.innerHTML = '<a href="./product.html?_id='+elem._id+'">Voir le produit</a>'
-        product.classList.add('product');
         para.innerText = elem.name + ' à ' + elem.price/100 + '€';
         
         anchor.appendChild(product)
@@ -19,7 +19,7 @@ function displayAllTeddies(nounours) {
     }
   }
 
-  /* FETCH API TEDDIES INFO*/
+  /* GET REQUEST TEDDIES INFO*/
   async function showAll() {
     await fetch('http://localhost:3000/api/teddies') 
       .then((response) => response.json()) 
