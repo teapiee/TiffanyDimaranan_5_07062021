@@ -71,7 +71,7 @@ footer img {
   }
 }
 footer .ftr-info {
-  width: 70%;
+  width: 80%;
   margin-top: -0.5rem;
   display: flex;
   flex-direction: row;
@@ -83,6 +83,16 @@ footer .ftr-info {
 @media screen and (min-width: 1100px) {
   footer .ftr-info {
     width: 40%;
+  }
+}
+footer .ftr-info p {
+  width: 40%;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .ftr-confirm {
+    margin-top: 25rem;
   }
 }
 

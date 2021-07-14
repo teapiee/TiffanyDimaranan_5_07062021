@@ -1,7 +1,5 @@
 section{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexAlign(flex,column,center);
 }
 
 #panier{
@@ -30,9 +28,7 @@ section{
 
 #bouton{
     width:70%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include flexJustify(flex,row,space-around);
     button{
         margin-top: 2rem;
         font-family: 'Montserrat', sans-serif;
@@ -40,7 +36,7 @@ section{
         font-size:17px;
         padding:0.6rem;
         border-radius: 0.7rem;
-        background-color: #c2a2f2;
+        background-color: $color-secondary;
         border:none;
         box-shadow:5px 5px 4px rgb(216, 213, 213);
         @include breakpoint(tablet){

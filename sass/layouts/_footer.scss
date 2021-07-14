@@ -1,8 +1,6 @@
 footer{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#f3e9f1;
+    @include flexAlign(flex,column,center);
+    background-color:$color-primary;
     margin-top:6rem;
     img{
         @include measure(130px,60px);
@@ -11,7 +9,7 @@ footer{
         }
     }
     .ftr-info{
-        width:70%;
+        width:80%;
         margin-top:-0.5rem;
         @include flexJustify(flex,row,space-around);
         font-family: 'Montserrat', sans-serif;
@@ -20,7 +18,15 @@ footer{
         @include breakpoint(laptop){
             width:40%;
         }
+        p{
+            width:40%;
+            text-align: center;
+        }
     }
 }
 
-// adjust space between footer and div here //
+.ftr-confirm{
+    @include breakpoint(tablet){
+        margin-top: 25rem;
+    }
+}

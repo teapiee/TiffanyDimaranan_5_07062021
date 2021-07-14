@@ -21,7 +21,7 @@ h1{
     margin-top: 3rem;
     margin-bottom: 2rem;
     border-radius:2rem;
-    background-color: #f3e9f1;
+    background-color: $color-primary;
     @include breakpoint(tablet){
         @include measure(50%,380px);
     }
@@ -52,7 +52,7 @@ h1{
         font-size:17px;
         padding:0.6rem;
         border-radius: 0.7rem;
-        background-color: #c2a2f2;
+        background-color:$color-secondary;
         @include breakpoint(tablet){
             font-size:22px;
             padding:0.8rem;

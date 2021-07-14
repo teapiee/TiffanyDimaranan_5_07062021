@@ -1,6 +1,6 @@
 header{
     @include flexJustify(flex,row,space-between);
-    background-color: #f3e9f1;
+    background-color: $color-primary;
     height:100px;
     @include breakpoint(tablet){
         height:130px;
