@@ -23,7 +23,11 @@ function displayAllTeddies(nounours) {
   async function showAll() {
     await fetch('http://localhost:3000/api/teddies') 
       .then((response) => response.json()) 
-      .then((nounours) => displayAllTeddies(nounours)) //console.log(nounours))
+      .then((nounours) => displayAllTeddies(nounours)) 
+      .catch(error => {
+        console.log(error)
+        alert('Un problème est survenu lors de la connexion aux serveur')
+      })
   }
   
   showAll()
