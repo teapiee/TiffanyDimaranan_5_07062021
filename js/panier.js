@@ -68,21 +68,64 @@ if (cart === null || cart.length === 0){ // if cart is empty then show message /
     envoyer.innerText = "Valider panier"
     formulaire.appendChild(envoyer)
 
-    // get element of form for validity//
-    let firstName = document.getElementById('prenom');
-    let lastName = document.getElementById('nom');
-    let address = document.getElementById('adresse');
-    let city = document.getElementById('ville');
-    let mail = document.getElementById('email');
-
     //when send button is clicked//
     envoyer.onclick = function(event){
         event.preventDefault()
 
+        let firstName = document.getElementById('prenom').value;
+        let lastName = document.getElementById('nom').value;
+        let address = document.getElementById('adresse').value;
+        let city = document.getElementById('ville').value;
+        let mail = document.getElementById('email').value;
+
         /* CHECK VALIDITY*/
-        if (firstName.checkValidity() && lastName.checkValidity() && address.checkValidity() &&
-        city.checkValidity() && mail.checkValidity()){
+        function controlPrenom() {
+            if (/^[A-Za-z]{2,20}$/.test(firstName)) {
+              return true;
+            } else {
+              alert("Le champ prénom n'est pas correctement renseigné")
+              return false;
+            }
+          }
         
+          function controlNom() {
+            if (/^[A-Za-z]{2,20}$/.test(lastName)) {
+              return true;
+            } else {
+              alert("Le champ nom n'est pas correctement renseigné")
+              return false;
+            }
+          }
+        
+          function controlAdresse() {
+            if (/^[A-Za-z0-9\s]{5,30}$/.test(address)) {
+              return true;
+            } else {
+              alert("Le champ adresse n'est pas correctement renseigné")
+              return false;
+            }
+          }
+        
+          function controlVille() {
+            if (/^[A-Za-z]{3,30}$/.test(city)) {
+              return true;
+            } else {
+              alert("Le champ ville n'est pas correctement renseigné")
+              return false;
+            }
+          }
+        
+          function controlEmail() {
+            if (/^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/.test(mail)) {
+              return true;
+            } else {
+              alert("Le champ email n'est pas correctement renseigné")
+              return false;
+            }
+          }
+        
+          if (controlPrenom() && controlNom() && controlAdresse() && controlVille() && controlEmail()) 
+          {
             let clientPrenom = document.getElementById('prenom').value; //get value of form//
             let clientNom = document.getElementById('nom').value;
             let clientAdresse = document.getElementById('adresse').value;
@@ -112,9 +155,14 @@ if (cart === null || cart.length === 0){ // if cart is empty then show message /
                     localStorage.setItem("order", JSON.stringify(response)) //create order key; with all the user's contact info and orderId// 
                     window.location.href = "confirmation.html" //redirect to confirmation page//
                 })
+                .catch(error => {
+                    console.log(error)
+                    alert('Un problème est survenu lors de la connexion aux serveur')
+                  })
+
+
              
-        }else{ //else statement of checkValidity//
-            alert("Le formulaire n'est pas correctement renseigné")
+        }else{ 
             return false
         }
     }
