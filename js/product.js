@@ -69,7 +69,9 @@ function addToCart(teddyInfo){
       panier.push(chosenProduct) 
       localStorage.setItem("panier" , JSON.stringify(panier))
       console.log(panier)}
-    }
+    
+    alert("Le produit a bien été ajouté!") 
+  }
 }
 
 /* GET REQUEST CHOSEN TEDDY*/
@@ -78,8 +80,10 @@ async function fetchChosenTeddy() {
     .then((response) => response.json()) 
     .then((teddyInfo) => {
       showChosenTeddy(teddyInfo)
-      addToCart (teddyInfo)
-      //console.log (teddyInfo)//
+      addToCart (teddyInfo)})
+    .catch(error => {
+        console.log(error)
+        alert('Un problème est survenu lors de la connexion aux serveur')
     })
 }
 fetchChosenTeddy()
